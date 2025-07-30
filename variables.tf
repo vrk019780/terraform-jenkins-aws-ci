@@ -23,11 +23,11 @@ variable "instance_type" {
 }
 
 variable "key_name" {
-  default = "jenkins-free"
+  default = "jenkins"
 }
 variable "private_key_path" {
   description = "Path to the private key for SSH connection"
   type        = string
-  default     = "/home/ec2-user/Terraform/Terraform-Project-Provisionars/terraform-server.pem"
+  default     = "/home/ec2-user/terraform/terraform-jenkins-aws-ci/terraform-server.pem"
 }
 
