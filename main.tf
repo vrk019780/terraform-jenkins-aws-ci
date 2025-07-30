@@ -146,7 +146,7 @@ resource "null_resource" "wait_for_tomcat" {
     command = <<EOC
       echo "⏳ Waiting for Tomcat to respond on port 8080..."
       for i in {1..20}; do
-        if curl -s http://${aws_instance.example.public_ip}:8080 | grep -q "My Online Store"; then
+        if curl -s http://${aws_instance.example.public_ip}:8080 | grep -q "MFH"; then
           echo "✅ Tomcat is UP and responding!"
           exit 0
         fi
